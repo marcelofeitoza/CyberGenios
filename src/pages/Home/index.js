@@ -35,7 +35,7 @@ const Home = ({ navigation }) => {
             source={require("../../assets/main-icon.png")}
             style={styles.logo}
           />
-          <Text style={styles.headerTitle}>Cyber Gênios</Text>
+          <Text style={styles.headerTitle}>Cyber Gênios123</Text>
         </View>
 
         <LectureList videoList={videoList} navigation={navigation} />
