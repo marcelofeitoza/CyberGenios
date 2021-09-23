@@ -1,15 +1,32 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React from "react";
+import { ScrollView, Text, View } from "react-native";
+import Lecture from "../../components/Lecture";
 
-import styles from './styles'
+import styles from "./styles";
 
-const LectureList = () => {
+const LectureList = ({ navigation, videoList }) => {
+  //console.log(videoList);
+
   return (
-    <View>
-      <Text></Text>
-    </View>
-  )
-}
+    <>
+      <Text style={styles.title}>Bem vindo, Guilherme!</Text>
+      <ScrollView
+        style={styles.container}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          alignItems: "center",
+        }}
+      >
+        {setTimeout(() => {}, 1250) && videoList.length > 0 ? (
+          videoList.map((video, index) => (
+            <Lecture key={index} id={video.id} navigation={navigation} />
+          ))
+        ) : (
+          <Text style={styles.title}>Nenhuma aula foi encontrada...</Text>
+        )}
+      </ScrollView>
+    </>
+  );
+};
 
-export default LectureList
-
+export default LectureList;

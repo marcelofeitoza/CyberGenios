@@ -1,13 +1,12 @@
 import { StyleSheet } from "react-native";
 
-const DEFAULT_FONT = require("../../../assets/fonts/Poppins-Regular.ttf");
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#323232"
+    paddingBottom: 100,
+    backgroundColor: "rgba(255,255,255,0.85)",
   },
 
   header: {
@@ -15,9 +14,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     //borderWidth: 1,
     //borderColor: "#fff",
-    height: "18%",
-    width: '91%',
-    marginBottom: 10,
+    width: "91%",
+    height: 130,
+    marginBottom: 15,
     justifyContent: "center",
   },
 
@@ -26,10 +25,26 @@ const styles = StyleSheet.create({
     height: "100%",
     borderRadius: 100,
     marginRight: 15,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 2,
+      height: 2,
+    },
+    shadowOpacity: 0.5,
   },
   title: {
-    color: "#fff",
+    color: "#2B2B2B",
     fontSize: 56,
+
+    // make a shadow
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 2,
+      height: 2,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 2,
+    elevation: 2,
   },
 });
 

@@ -1,15 +1,49 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React, { useState } from "react";
+import { StatusBar, Text, View, Image } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import FooterBar from "../../components/FooterBar/HomeFooter";
+import LectureList from "../../components/LectureList";
 
-import styles from './styles'
+import styles from "./styles";
 
-const Home = () => {
+const Home = ({ navigation }) => {
+  const [videoList, setVideoList] = useState([
+    { id: "j942wKiXFu8" },
+    { id: "kVeOpcw4GWY" },
+    { id: "9D1x7-2FmTA" },
+    { id: "pnhO8UaCgxg" },
+    { id: "0sSYmRImgRY" },
+    { id: "NbTrGcz4DW8" },
+    { id: "0XSDAup85SA" },
+  ]);
+
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
-  )
-}
+    <>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="rgba(0,0,0,0)"
+        translucent
+      />
+      <LinearGradient
+        colors={["rgb(155, 56, 195)", "rgb(238, 51, 104)"]}
+        start={[1, 0]}
+        end={[0, 1]}
+        style={styles.container}
+      >
+        <View style={styles.header}>
+          <Image
+            source={require("../../assets/main-icon.png")}
+            style={styles.logo}
+          />
+          <Text style={styles.headerTitle}>Cyber Gênios</Text>
+        </View>
 
-export default Home
+        <LectureList videoList={videoList} navigation={navigation} />
 
+        <FooterBar navigation={navigation} />
+      </LinearGradient>
+    </>
+  );
+};
+
+export default Home;
