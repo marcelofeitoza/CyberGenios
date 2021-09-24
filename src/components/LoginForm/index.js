@@ -3,22 +3,26 @@ import { Text, View, TextInput, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import styles from "./styles";
-import { NavigationContainer } from "@react-navigation/native";
 
 const LoginForm = ({ navigation }) => {
-  const [username, setUsername] = useState("guitafelli");
-  const [password, setPassword] = useState("testing");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
     if (username === "guitafelli" && password === "testing") {
       navigation.navigate("Home") && setUsername("") && setPassword("");
+    } else if (username.length == 0 && password.length == 0) {
+      alert("Você deve digitar seu usuário ou email e senha!") &&
+        setPassword("") &&
+        setUsername("");
     } else {
-      alert("Usuário ou senha incorretos");
+      alert("Usuário ou senha incorretos") &&
+        setPassword("") &&
+        setUsername("");
     }
   };
 
   return (
-    //<View style={styles.loginForm}>
     <LinearGradient
       colors={["rgb(155, 56, 195)", "rgb(238, 51, 104)"]}
       start={[1, 0]}
@@ -58,7 +62,6 @@ const LoginForm = ({ navigation }) => {
         <Text style={styles.loginButtonText}>Log In</Text>
       </TouchableOpacity>
     </LinearGradient>
-    //</View>
   );
 };
 
