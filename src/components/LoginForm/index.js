@@ -9,7 +9,7 @@ const LoginForm = ({ navigation }) => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    if (username === "guitafelli" && password === "testing") {
+    if (username.length >= 1 && password.length >= 1) {
       navigation.navigate("Home") && setUsername("") && setPassword("");
     } else if (username.length == 0 && password.length == 0) {
       alert("Você deve digitar seu usuário ou email e senha!") &&
