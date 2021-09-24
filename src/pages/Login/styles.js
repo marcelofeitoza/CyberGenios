@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    paddingBottom: 100,
+    paddingBottom: 50,
     backgroundColor: "rgba(255,255,255,0.85)",
   },
 
@@ -27,24 +27,23 @@ const styles = StyleSheet.create({
     marginRight: 15,
     shadowColor: "#000",
     shadowOffset: {
-      width: 2,
-      height: 2,
+      width: 4,
+      height: 4,
     },
     shadowOpacity: 0.5,
   },
   title: {
     color: "#2B2B2B",
-    fontSize: 56,
+    fontSize: 52,
 
     // make a shadow
     shadowColor: "#000",
     shadowOffset: {
-      width: 2,
-      height: 2,
+      width: 4,
+      height: 4,
     },
     shadowOpacity: 0.5,
-    shadowRadius: 2,
-    elevation: 2,
+    shadowRadius: 4,
   },
 });
 

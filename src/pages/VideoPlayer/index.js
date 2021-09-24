@@ -1,6 +1,5 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import { ScrollView, StatusBar, Text, View } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import Header from "../../components/HeaderBar";
 
 import YoutubePlayer from "react-native-youtube-iframe";

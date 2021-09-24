@@ -6,8 +6,6 @@ import styles from "./styles";
 const Lecture = ({ navigation, id }) => {
   const [videoDetails, setVideoDetails] = useState({});
 
-  //console.log(id)
-
   useEffect(() => {
     async function getVideoDetails(id) {
       let response = await fetch(
@@ -20,7 +18,7 @@ const Lecture = ({ navigation, id }) => {
     getVideoDetails(id);
   }, []);
 
-  const navigateToVideo = (props) => {
+  const navigateToVideo = () => {
     navigation.navigate("VideoPlayer", {
       videoId: id,
       title: videoDetails.title,

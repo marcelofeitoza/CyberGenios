@@ -12,9 +12,9 @@ const styles = StyleSheet.create({
 
   videoContainer: {
     width: "100%",
-    //set height to 25% of the width
-    height: "35%",
-    backgroundColor: "#ebebeb",
+
+    height: 225,
+    backgroundColor: "#2b2b2b",
     marginBottom: "auto",
   },
 
